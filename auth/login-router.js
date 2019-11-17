@@ -18,7 +18,8 @@ router.post('/', (req, res) => {
         const token = Token.getJwt(user.username);
 
         res.status(200).json({
-          message: `Welcome ${user.username}!`,
+          id: user.id,
+          username: user.username,
           token
         });
       } else {
