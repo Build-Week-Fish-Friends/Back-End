@@ -34,13 +34,39 @@ This REST API was built using the following tools/libraries:
 ---
 
 ## API
-The leading URL for all endpoints provided below is: `https://fish-friends-resources.herokuapp.com`, simply add the endpoint uri and any relevant body JSON, headers, or queries to access resources.
+The leading URI for all endpoints provided below is: `https://fish-friends-resources.herokuapp.com`, simply add the endpoint URL and any relevant body JSON, headers, or queries to access resources.
 
-### Auth
+### 🔐 Auth
+`POST` to `/api/register` with the following user object attached to the request body:
+```js
+{
+  "username": "someUsername", // must be at least 2 characters long
+  "password": "somePassword" // must be at least 4 characters long
+}
+```
+`POST` to `/api/login` with the following user object attached to the request body:
+```js
+{
+  "username": "someUsername", // must be at least 2 characters long
+  "password": "somePassword" // must be at least 4 characters long
+}
+```
 
-### Users
+Both the `/register` and `/login` endpoints will return an object containing a token if the request is sent correctly. That object will look like this:
+```js
+{
+  "id": 0,
+  "username": "someUsername",
+  "token": "aReallyLongStringOfJibberishThatNeedsToBeSentToTheAPIAsAnAuthorizationHeaderOnEveryRequestToRestrictedRoutes"
+}
+```
+The Id and Username are made availble immediately to the client on successful login or register, as well as the token that must be sent as an Authorization header on conesecutive requests.
 
-### Logs
+### 👥 Users
+
+`GET` to `/api/users` with the associated user token attached as an `Authorization` header. Will return an array of user objects.
+
+### 🌐 Logs
 
 ----
 
