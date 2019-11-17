@@ -34,7 +34,7 @@ This REST API was built using the following tools/libraries:
 ---
 
 ## API
-The leading URL for all endpoints provided below is: `someheroku.comendpoint`
+The leading URL for all endpoints provided below is: `https://fish-friends-resources.herokuapp.com`, simply add the endpoint uri and any relevant body JSON, headers, or queries to access resources.
 
 ### Auth
 
