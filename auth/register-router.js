@@ -22,9 +22,9 @@ router.post('/', (req, res) => {
       .then(saved => {
         res.status(201).json({ id: saved.id, username: saved.username, token: token });
       })
-      .catch(error => {
-        res.status(500).json(error);
-      })
+      // .catch(error => {
+      //   res.status(500).json(error);
+      // })
 
   } else {
 
