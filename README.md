@@ -70,7 +70,13 @@ Both the `/register` and `/login` endpoints return an object containing a token 
 >  ```
 The Id and Username are made availble immediately to the client on successful login or register, as well as the token that must be sent as an Authorization header on conesecutive requests.
 
-<br/>
+---
+❗ ALL ROUTES BELOW ARE PROTECTED AND MUST USE A TOKEN ❗
+  
+---
+
+
+
 
 ### 👥 Users
 #### Any request made to these `/users` routes must have an `Authorization` header containing the token of the logged-in user.
