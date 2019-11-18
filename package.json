@@ -13,7 +13,7 @@
     "url": "git+https://github.com/Build-Week-Fish-Friends/Back-End.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Benjamin Rogers",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Build-Week-Fish-Friends/Back-End/issues"
@@ -36,5 +36,8 @@
     "jest": "^24.9.0",
     "nodemon": "^1.19.4",
     "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
