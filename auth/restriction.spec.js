@@ -1,1 +1,0 @@
-// TODO write unit test for restriction.js

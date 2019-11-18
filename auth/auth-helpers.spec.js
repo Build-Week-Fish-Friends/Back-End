@@ -1,1 +1,0 @@
-// TODO write unit test for auth-helpers.js
