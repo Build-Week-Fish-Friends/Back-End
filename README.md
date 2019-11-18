@@ -10,9 +10,7 @@ Backend Server and Node REST API for Fish Friends
 - [Mission](#mission)
 - [Technologies](#technologies)
 - [API](#API)
-  - [Auth](#auth)
-  - [Users](#users)
-  - [Logs](#logs)
+- [License](#license)
 
 ---
 
@@ -33,10 +31,15 @@ This REST API was built using the following tools/libraries:
 
 ---
 
+<br/>
+
 ## API
 The leading URI for all endpoints provided below is: `https://fish-friends-resources.herokuapp.com`, simply add the endpoint URL and any relevant body JSON, headers, or queries to access resources.
 
 ### 🔐 Auth
+
+<br/>
+
 - `POST` to `/api/register` with the following user object attached to the request body:
 > ```js
 > {
@@ -44,6 +47,8 @@ The leading URI for all endpoints provided below is: `https://fish-friends-resou
 >   "password": "somePassword" // must be at least 4 characters long
 > }
 > ```
+
+<br/>
 
 - `POST` to `/api/login` with the following user object attached to the request body:
 > ```js
@@ -53,7 +58,9 @@ The leading URI for all endpoints provided below is: `https://fish-friends-resou
 > }
 > ```
 
-Both the `/register` and `/login` endpoints will return an object containing a token if the request is sent correctly. That object will look like this:
+<br/>
+
+Both the `/register` and `/login` endpoints return an object containing a token _if_ the request is sent correctly. That object will look like this:
 >  ```js
 >  {
 >    "id": 0,
@@ -63,15 +70,30 @@ Both the `/register` and `/login` endpoints will return an object containing a t
 >  ```
 The Id and Username are made availble immediately to the client on successful login or register, as well as the token that must be sent as an Authorization header on conesecutive requests.
 
+<br/>
+
 ### 👥 Users
+#### Any request made to these `/users` routes must have an `Authorization` header containing the token of the logged-in user.
 
-- `GET` to `/api/users` with the associated user token attached as an `Authorization` header. Will return an array of user objects.
+<br/>
 
-- `GET` to `/api/users/:id` with a token attached as an `Authorization` header. Will return a single user object.
+- `GET` to `/api/users` with the associated user token attached as an `Authorization` header. 
+  - Will return an array of user objects.
+
+<br/>
+
+- `GET` to `/api/users/:id` with a token attached as an `Authorization` header. 
+  - Will return a single user object.
+
+<br/>
 
 ### 🌐 Logs
 
+<br/>
+
 ----
+
+<br/>
 
 ## License
 
