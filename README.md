@@ -79,7 +79,7 @@ The Id and Username are made availble immediately to the client on successful lo
 
 
 ### 👥 Users
-#### Any request made to these `/users` routes must have an `Authorization` header containing the token of the logged-in user.
+The anglers who use our app
 
 <br/>
 
@@ -93,9 +93,35 @@ The Id and Username are made availble immediately to the client on successful lo
 
 <br/>
 
+---
+
 ### 🌐 Logs
+The records of fishing spots
 
 <br/>
+
+- `GET` to `/api/logs` with the associated user token attached as an `Authorization` header. 
+  - Will return an array of log objects.
+
+<br/>
+
+- `GET` to `/api/logs/:id` with a token attached as an `Authorization` header. 
+  - Will return a single log object.
+
+----
+
+### 🗺️ Areas
+The areas where our app is used. Fish Friends is used in only 4 areas so far.
+
+<br/>
+
+- `GET` to `/api/areas` with the associated user token attached as an `Authorization` header. 
+  - Will return an array of area objects.
+
+<br/>
+
+- `GET` to `/api/areas/:id` with a token attached as an `Authorization` header. 
+  - Will return a single area object.
 
 ----
 
