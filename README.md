@@ -75,6 +75,9 @@ The Id and Username are made availble immediately to the client on successful lo
   
 ---
 
+> There is a single login that is the main reference point for all seeded data. Feel free to add logs using this user, or register a new one. Simply keep track of any passwords you create.
+> > Login >>> username: "Lambda" password: "1234"
+
 
 
 
