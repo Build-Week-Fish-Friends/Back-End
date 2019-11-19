@@ -12,6 +12,16 @@ exports.up = function(knex) {
     users 
       .string('password', 128)
       .notNullable();
+
+    users 
+      .string('email', 128)
+
+    users
+      .string('firstName', 128)
+
+    users
+      .string('lastName', 128)
+      
   });
 };
 
