@@ -5,7 +5,7 @@ const helmet = require('helmet');
 const logger = require('../middleware/logger');
 
 const usersRouter = require("../users/user-router");
-const logsRouter = require("../logs/log-router");
+const logsRouter = require("../fishLogs/log-router");
 const areasRouter = require("../areas/areas-router");
 const loginRouter = require("../auth/login-router.js");
 const registerRouter = require("../auth/register-router.js");
