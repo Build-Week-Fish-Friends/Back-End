@@ -108,8 +108,73 @@ The records of fishing spots
 
 <br/>
 
-- `GET` to `/api/logs/:id` with a token attached as an `Authorization` header. 
+- `GET` to `/api/logs/:id` with a token attached as an `Authorization` header. The id should be the desired log
   - Will return a single log object.
+
+<br/>
+
+- `GET` to `/api/logs/user/:id` with the associated user token attached as an `Authorization` header. Gets all logs by user id.
+  - Will return an array of log objects.
+
+<br/>  
+
+- `GET` to `/api/logs/area/:id` with the associated user token attached as an `Authorization` header. Gets all logs by area id.
+  - Will return an array of log objects.
+
+<br/>
+
+- `POST` to `/api/logs` with the associated user token attached as an `Authorization` header.
+  - Will return an array of log objects.
+  -  Must include the following log object attached to body of request:  
+
+```js
+{	
+	"name": "Secret Spot", // required, all other fields optional
+	"description": "Lots of good shade, very buggy",
+	"latitude": null,
+	"longitude": null,
+	"duration": "1h 17m",
+	"bait": "Lure",
+	"num_catch": 2,
+	"species": "Catfish",
+	"photo_url": "https://media.istockphoto.com/photos/fishing-concepts-picture-id664304800?k=6&m=664304800&s=612x612&w=0&h=ROFo47Oot_zqg8SOLgj_3hZ0a8RpsfGfQhdC3zYqUeA=",
+	"user_id": 1, // required to associate this log with a user
+	"area_id": 2 // required to associate this log with an area
+}  	
+```
+
+<br/>
+
+- `PUT` to `/api/logs/:id` with the associated user token attached as an `Authorization` header.
+  - Edits log, sepcified by id	
+  - Will return an array of log objects.
+  - Must include the following log object attached to body of request:  
+
+```js
+{	
+	"name": "Secret Spot", // required, all other fields optional
+	"description": "Lots of good shade, very buggy",
+	"latitude": null,
+	"longitude": null,
+	"duration": "1h 17m",
+	"bait": "Lure",
+	"num_catch": 2,
+	"species": "Catfish",
+	"photo_url": "https://media.istockphoto.com/photos/fishing-concepts-picture-id664304800?k=6&m=664304800&s=612x612&w=0&h=ROFo47Oot_zqg8SOLgj_3hZ0a8RpsfGfQhdC3zYqUeA=",
+	"user_id": 1, // required to associate this log with a user
+	"area_id": 2 // required to associate this log with an area
+}  	
+```
+
+<br/>
+
+- `DELETE` to `/api/logs/:id` with the associated user token attached as an `Authorization` header.
+  - Deletes log, sepcified by id	
+  - Will return the number of logs deleted.
+  
+<br/>
+<br/>
+    
 
 ----
 
