@@ -129,7 +129,7 @@ The records of fishing spots
 
 ```js
 {	
-	"name": "Secret Spot", // required, all other fields optional
+	"name": "Secret Spot", // required
 	"description": "Lots of good shade, very buggy",
 	"latitude": null,
 	"longitude": null,
@@ -138,8 +138,8 @@ The records of fishing spots
 	"num_catch": 2,
 	"species": "Catfish",
 	"photo_url": "https://media.istockphoto.com/photos/fishing-concepts-picture-id664304800?k=6&m=664304800&s=612x612&w=0&h=ROFo47Oot_zqg8SOLgj_3hZ0a8RpsfGfQhdC3zYqUeA=",
-	"user_id": 1, // required to associate this log with a user
-	"area_id": 2 // required to associate this log with an area
+	"user_id": 1, // required, associates this log with a user
+	"area_id": 2 // required, associates this log with an area
 }  	
 ```
 
@@ -161,8 +161,8 @@ The records of fishing spots
 	"num_catch": 2,
 	"species": "Catfish",
 	"photo_url": "https://media.istockphoto.com/photos/fishing-concepts-picture-id664304800?k=6&m=664304800&s=612x612&w=0&h=ROFo47Oot_zqg8SOLgj_3hZ0a8RpsfGfQhdC3zYqUeA=",
-	"user_id": 1, // required to associate this log with a user
-	"area_id": 2 // required to associate this log with an area
+	"user_id": 1, // required, associates this log with a user
+	"area_id": 2 // required, associates this log with an area
 }  	
 ```
 
