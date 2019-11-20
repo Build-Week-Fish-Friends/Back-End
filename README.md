@@ -152,7 +152,7 @@ The records of fishing spots
 
 ```js
 {	
-	"name": "Secret Spot", // required, all other fields optional
+	"name": "Secret Spot", // required
 	"description": "Lots of good shade, very buggy",
 	"latitude": null,
 	"longitude": null,
