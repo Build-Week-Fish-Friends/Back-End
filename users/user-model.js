@@ -9,6 +9,7 @@ module.exports = {
   remove
 };
 
+
 function find() {
   return db('users').select('id', 'username', 'firstName', 'lastName', 'email');
 }
@@ -18,7 +19,7 @@ function findBy(filter) {
 }
 
 async function add(user) {
-  const [id] = await db('users').insert(user);
+  const [id] = await db('users').insert(user); // add , 'id' after log to return id in psql
   return findById(id);
 }
 
@@ -32,7 +33,7 @@ function findById(id) {
 function update(id, user) {
   return db('users')
     .where('id', Number(id))
-    .update(user);
+    .update(user); // add , 'id' after log to return id in psql
 }
 
 function remove(id) {

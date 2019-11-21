@@ -16,6 +16,8 @@ describe("logs model", () => {
       await db('users').truncate();
     });
 
+    
+
     it('should add a log', async () => {
       await users.add({
         username: "Lambda",

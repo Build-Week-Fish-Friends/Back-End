@@ -12,6 +12,7 @@ describe("areas model", () => {
       const areas = await find();
       expect(Array.isArray(areas)).toBe(true);
     });
+    
 
     it('should return a name field', async () => {
       await add({ name: "areaPlace" });

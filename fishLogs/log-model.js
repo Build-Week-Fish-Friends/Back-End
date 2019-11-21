@@ -18,7 +18,7 @@ function findBy(filter) {
 };
 
 async function add(log) {
-  const [id] = await db('logs').insert(log);
+  const [id] = await db('logs').insert(log); // add , 'id' after log to return id in psql
   return findById(id);
 };
 
@@ -31,7 +31,7 @@ function findById(id) {
 async function update(id, log) {
   await db('logs')
     .where('id', Number(id))
-    .update(log, 'id');
+    .update(log); // add , 'id' after log to return id in psql
   return findById(id);
 };
 
