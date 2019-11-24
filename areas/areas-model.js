@@ -18,6 +18,6 @@ function findById(id) {
 }
 
 async function add(area) {
-  const [id] = await db('areas').insert(area);
+  const [id] = await db('areas').insert(area, 'id');
   return findById(id);
 }

@@ -4,10 +4,10 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('areas').insert([
-        {id: 1, name: 'North Muddy Boggy Creek'},
-        {id: 2, name: 'South Muddy Boggy Creek'},
-        {id: 3, name: 'East Lake Minnetonka'},
-        {id: 4, name: 'West Lake Minnetonka'}
+        {name: 'North Muddy Boggy Creek'},
+        {name: 'South Muddy Boggy Creek'},
+        {name: 'East Lake Minnetonka'},
+        {name: 'West Lake Minnetonka'}
       ]);
     });
 };

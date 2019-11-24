@@ -19,7 +19,7 @@ function findBy(filter) {
 }
 
 async function add(user) {
-  const [id] = await db('users').insert(user); // add , 'id' after log to return id in psql
+  const [id] = await db('users').insert(user, 'id');
   return findById(id);
 }
 
@@ -33,7 +33,7 @@ function findById(id) {
 function update(id, user) {
   return db('users')
     .where('id', Number(id))
-    .update(user); // add , 'id' after log to return id in psql
+    .update(user);
 }
 
 function remove(id) {
